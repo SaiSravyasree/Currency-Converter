@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Currency Converter</h1>
+    
+    <form action="/convert" method="POST">
+        <label for="base_currency">From:</label>
+        <input type="text" id="base_currency" name="base_currency" placeholder="Enter base currency" required>
+        
+        <label for="target_currency">To:</label>
+        <input type="text" id="target_currency" name="target_currency" placeholder="Enter target currency" required>
+        
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" placeholder="Enter amount" required>
+
+        <button type="submit">Convert</button>
+    </form>
+
+    {% if converted_amount %}
+    <h2>{{ amount }} {{ base_currency }} = {{ converted_amount }} {{ target_currency }}</h2>
+    {% endif %}
+</body>
+</html>
