@@ -9,7 +9,6 @@ A simple web application that allows users to convert between different currenci
 - [Technical Aspect](#technical-aspect)
 - [Technologies Used](#technologies-used)
 
-
 ---
 
 ### Overview
